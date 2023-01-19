@@ -4,11 +4,14 @@ import { usePokemon } from '../../hooks/pokemon';
 
 export default function Main() {
   const { pokemon } = usePokemon();
-  console.log('pokemon', pokemon);
+  console.log('pokemon from Main', pokemon);
 
   return (
     <main>
       <Controls />
+      {pokemon.map((poke) => (
+        <div key={poke._id}>{poke.pokemon}</div>
+      ))}
     </main>
   );
 }

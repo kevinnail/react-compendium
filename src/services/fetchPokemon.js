@@ -3,7 +3,6 @@ export async function fetchPokemon() {
   console.log('resp', resp);
 
   const data = await resp.json();
-  console.log('data', data);
 
   return data.results;
 }
