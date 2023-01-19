@@ -1,3 +1,5 @@
+import './PokeCard.css';
+
 export function PokeCard({ poke }) {
   return (
     <div className="PokeCard">
