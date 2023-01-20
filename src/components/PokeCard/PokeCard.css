@@ -1,0 +1,9 @@
+.PokeCard {
+  border: 1px solid black;
+  height: 400px;
+  width: 200px;
+}
+
+img {
+  height: 150px;
+}
