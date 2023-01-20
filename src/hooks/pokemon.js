@@ -5,7 +5,6 @@ export function usePokemon() {
   const [pokemon, setPokemon] = useState([]);
   const [types, setTypes] = useState([]);
   const [loading, setLoading] = useState(true);
-  // console.log('pokemon from hooks', pokemon);
 
   useEffect(() => {
     setLoading(true);
@@ -21,7 +20,6 @@ export function usePokemon() {
     const fetchData = async () => {
       const data = await fetchTypes();
       const filteredData = data.map((data) => data.type);
-      // console.log('filtered', filteredData);
       setTypes(filteredData);
     };
     fetchData();

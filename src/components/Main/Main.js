@@ -7,7 +7,6 @@ import './Main.css';
 
 export default function Main() {
   const { pokemon, types, handleTypeChange, loading } = usePokemon();
-  // console.log('pokemon from Main', pokemon);
 
   return (
     <main>
