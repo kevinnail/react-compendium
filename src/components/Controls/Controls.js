@@ -1,9 +1,9 @@
 import React from 'react';
 import Select from '../Select/Select';
-export default function Controls({ types }) {
+export default function Controls({ types, handleTypeChange }) {
   return (
     <div>
-      <Select {...{ types }} />
+      <Select {...{ types, handleTypeChange }} />
     </div>
   );
 }

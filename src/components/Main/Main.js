@@ -6,12 +6,12 @@ import { usePokemon } from '../../hooks/pokemon';
 import './Main.css';
 
 export default function Main() {
-  const { pokemon, types } = usePokemon();
+  const { pokemon, types, handleTypeChange } = usePokemon();
   // console.log('pokemon from Main', pokemon);
 
   return (
     <main>
-      <Controls {...{ types }} />
+      <Controls {...{ types, handleTypeChange }} />
       {/* <Controls types={types} /> */}
       <div className="cards">
         {pokemon.map((poke) => (

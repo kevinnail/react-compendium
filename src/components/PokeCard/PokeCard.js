@@ -6,7 +6,7 @@ export function PokeCard({ poke }) {
       <h2>{poke.pokemon}</h2>
       <img src={poke.url_image} />
       <p>Shape: {poke.shape}</p>
-      <p>Type: {poke.type}</p>
+      <p>Type: {poke.type_1}</p>
       <p>Attack: {poke.attack}</p>
       <p>Defense: {poke.defense}</p>
     </div>

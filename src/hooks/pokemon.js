@@ -9,7 +9,7 @@ export function usePokemon() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await fetchPokemon();
+      const data = await fetchPokemon('all');
       setPokemon(data);
     };
     fetchData();
@@ -25,5 +25,12 @@ export function usePokemon() {
     fetchData();
   }, []);
 
-  return { pokemon, types };
+  const handleTypeChange = async (selectedType) => {
+    const data = await fetchPokemon(selectedType);
+    console.log('data from handleTypeChange', data);
+
+    setPokemon(data);
+  };
+
+  return { pokemon, types, handleTypeChange };
 }
