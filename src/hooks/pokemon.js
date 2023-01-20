@@ -5,6 +5,7 @@ export function usePokemon() {
   const [pokemon, setPokemon] = useState([]);
   const [types, setTypes] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
     setLoading(true);
@@ -25,7 +26,7 @@ export function usePokemon() {
     fetchData();
   }, []);
 
-  const handleTypeChange = async (selectedType) => {
+  const handleQuery = async (selectedType) => {
     setLoading(true);
     const data = await fetchPokemon(selectedType);
 
@@ -33,5 +34,5 @@ export function usePokemon() {
     setLoading(false);
   };
 
-  return { pokemon, types, handleTypeChange, loading };
+  return { pokemon, types, handleQuery, loading };
 }

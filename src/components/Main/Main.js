@@ -6,11 +6,11 @@ import { usePokemon } from '../../hooks/pokemon';
 import './Main.css';
 
 export default function Main() {
-  const { pokemon, types, handleTypeChange, loading } = usePokemon();
+  const { pokemon, types, handleQuery, loading } = usePokemon();
 
   return (
     <main>
-      <Controls {...{ types, handleTypeChange }} />
+      <Controls {...{ types, handleQuery }} />
       {loading && <h1>Loading...</h1>}
       {!loading && (
         <div className="cards">
