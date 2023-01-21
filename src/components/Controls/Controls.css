@@ -1,0 +1,11 @@
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+  background-image: radial-gradient(#fff, rgb(75, 75, 75));
+  width: 94%;
+  margin: auto;
+}
